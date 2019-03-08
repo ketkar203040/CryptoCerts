@@ -1,0 +1,21 @@
+<% include partials/header %>
+<% if(data){ %>
+<div class="mt-4 w-50 mx-auto">
+<% data.forEach(function(cert){ %>
+<div class="card shadow-sm ml-2 mr-2">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-9">
+                <h5><%= cert.org %> wants to view your <%= cert.degree %> certificate</h5>
+            </div>
+            <div class="col-lg-3 ustify-content-right">
+                <a href="/user/share/<%= cert.address %>/<%= cert.email %>" class="btn btn-dark ">Share</a>
+            </div>
+        </div>
+    </div>
+</div>
+<% }) %>
+</div>
+<% } %>
+
+<% include partials/footer %>

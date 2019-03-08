@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<h3 class="text-center"><a class="btn btn-dark mt-3" href="<%= cert.downloadlink %>">Download Verify.json</a></h3>
+<div class="mt-4" style="margin: auto; width:800px;height:600px; padding:20px; text-align:center;background-color:#E6E6FA;border: 10px solid #787878">
+    <div style="width:750px; height:550px; padding:20px; text-align:center; border: 5px solid #787878">
+    
+          <img align="left" src="/img/iitmadras.png" widht=100px height=100px>
+          <span style="font-size:30px; font-weight:bold"><i>Indian Institute of Technology</i></span>
+          <img align="right" src="/img/Photo from kondepuvamsi.jpg" widht=80px height=80px>
+          <br><br> 
+          <span style="font-size:25px; font-weight:bold"><i>Certificate of Completion</i></span>
+          <br><br>
+          <span style="font-size:25px"><i>This is to certify that</i></span>
+          <br><br>
+          <span style="font-size:30px"><b><%= cert.name %></b></span><br/><br/>
+          <span style="font-size:25px"><i>has completed the course</i></span> <br/><br/>
+          <span style="font-size:30px;font-weight:bold"><%= cert.course %></span> <br/><br/>
+          <span style="font-size:20px">with score of <b><%= cert.score %></b></span> <br/><br/><br/><br/>
+          
+    
+    </div>
+</div>
+
+<% include partials/footer %>

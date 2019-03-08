@@ -1,0 +1,44 @@
+<% include partials/header %>
+
+<div class="container">
+    <% if(status == 1){ %>
+    <div class="card m-5 w-50 mx-auto shadow-sm">
+        <div class="card-body">
+            <h1 class="card-title text-center text-success display-3"><i class="fas fa-check-circle"></i> Verified</h1>
+            <h4 class="text-center"><%= data.name %></h4>
+            <p class="card-text text-center text-info lead"><%= data.degree %></p>
+            <p class="card-text text-center text-info lead"><%= data.college %></p>
+        </div>
+        <form class="m-4" action="/user/requestCertView/<%= address %>" method="POST">
+            <h4 class="text-center">Request Certificate</h4>
+            <div class="form-group">
+                <label for="email" class="sr-only">Email</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="sr-only">Email</label>
+                <input type="text" name="name" class="form-control" placeholder="Organization Name" required>
+            </div>
+            <button class="btn btn-success btn-block mx-auto" type="submit">Send Request</button>
+        </form>
+    </div>
+    <% } else if(status == -1){ %>
+    <div class="card m-5 w-50 mx-auto shadow-sm">
+        <div class="card-body">
+            <h1 class="card-title text-center text-warning display-3"><i class="fas fa-exclamation-triangle"></i> Revoked</h1>
+            <h4 class="text-center"><%= data.name %></h4>
+            <p class="card-text text-center text-info lead"><%= data.degree %></p>
+            <p class="card-text text-center text-info lead"><%= data.college %></p>
+        </div>
+    </div>
+    <% } else { %>
+        <div class="card m-5 w-50 mx-auto shadow-sm">
+            <div class="card-body">
+                <h1 class="card-title text-center text-danger display-3"><i class="fas fa-times-circle"></i> Not Verified!</h1>
+                
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<% include partials/footer %>
