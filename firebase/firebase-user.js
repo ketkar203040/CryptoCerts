@@ -4,12 +4,12 @@ require('firebase/database');
 
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyAWJKk-lpeb2B0Rj0HSsbz8kYAWE52-_t8",
-    authDomain: "cryptocertsuser.firebaseapp.com",
-    databaseURL: "https://cryptocertsuser.firebaseio.com",
-    projectId: "cryptocertsuser",
-    storageBucket: "cryptocertsuser.appspot.com",
-    messagingSenderId: "576212006574"
+    apiKey: "<API KEY>",
+    authDomain: "<DOMAIN>",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
   };
 //firebase.initializeApp(config);
 const mFirebase = firebase.initializeApp(config);
@@ -69,20 +69,6 @@ function checkLoginPage(req, res, next){
 }
 
 //DB methods
-
-// //Add Certificate to database
-// function addCertToDb(uid, data, callback){
-//     console.log(data);
-//     var dataref = database.ref('user/' + uid + '/certificates').push();
-//     dataref.set(data, function(err){
-//         if(err){
-//             console.log(err);
-//         } else {
-//             callback();
-//         }
-
-//     });
-// }
 
 //Add Certificate to database
 function addCertToDb(data, callback){

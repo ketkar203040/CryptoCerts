@@ -4,12 +4,12 @@ require('firebase/database')
 
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyDBHY_1u8g_dXyrACbyPGhQpbbpmzR8OtU",
-    authDomain: "cryptocertsissuer.firebaseapp.com",
-    databaseURL: "https://cryptocertsissuer.firebaseio.com",
-    projectId: "cryptocertsissuer",
-    storageBucket: "cryptocertsissuer.appspot.com",
-    messagingSenderId: "790482151042"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
   };
 const mFirebase = firebase.initializeApp(config, 'issuer');
 const database = mFirebase.database();
